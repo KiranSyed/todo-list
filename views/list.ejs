@@ -2,18 +2,25 @@
 <html>
 <head>
 	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<h1><%= day %></h1>
-	<form class="" action="/" method="post">
-		<input type="text" name="newItem">
-		<button type="submit" name="button">add</button>
-	</form>
-	<ul>
-			<!-- <% let i=0 %> -->
-			<% for (let i=0; i<newItem.length; i++){ %>
-			<li><%= newItem[i] %></li>
-			<% } %>
-	</ul>
+	<div class="box" id="heading">
+		<h1><%= listTitle %></h1>
+		</div>
+			<div class="box">
+				<% for (let i=0; i<newListItems.length; i++){ %>
+				<div class="item">
+					<input type="checkbox" name="">
+					<p><%= newListItems[i] %></p>
+				</div>
+				<% } %>
+		<form class="item" action="/" method="post">
+			<input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+			<button type="submit" name="list" value=<%= listTitle %>>+</button>
+		</form>
+	</div>
+	
+	
 </body>
 </html>
