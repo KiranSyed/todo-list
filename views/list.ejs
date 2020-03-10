@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+<body>
+	<h1><%= day %></h1>
+	<form class="" action="/" method="post">
+		<input type="text" name="newItem">
+		<button type="submit" name="button">add</button>
+	</form>
+	<ul>
+			<!-- <% let i=0 %> -->
+			<% for (let i=0; i<newItem.length; i++){ %>
+			<li><%= newItem[i] %></li>
+			<% } %>
+	</ul>
+</body>
+</html>
